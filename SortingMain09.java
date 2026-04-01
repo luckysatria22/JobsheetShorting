@@ -7,5 +7,13 @@ public class SortingMain09 {
         dataurut1.bubbleSort();
         System.out.println("Data setelah diurutkan : ");
         dataurut1.tampil();
+
+        int b[] = {30, 20, 2, 8,14};
+        Sorting dataurut2 = new Sorting(b, b.length);
+        System.out.println("Data awal 2");
+        dataurut2.tampil();
+        dataurut2.SelectionSort();
+        System.out.println("Data setelah diurutkan : ");
+        dataurut2.tampil();
     }
 }
