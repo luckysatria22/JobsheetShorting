@@ -66,3 +66,18 @@ public class MahasiswaDemo {
         sc.close();
     }
 }
+
+Jawaban Pertanyaan (5.3.7)
+1. Proses Mencari Indeks Minimum
+javaint idxMin = i;
+for (int j = i + 1; j < listMhs.length; j++) {
+    if (listMhs[j].ipk < listMhs[idxMin].ipk) {
+        idxMin = j;
+    }
+}
+Proses ini berfungsi untuk mencari posisi (indeks) elemen dengan nilai IPK terkecil dari posisi i hingga akhir array. Variabel idxMin awalnya diasumsikan berada di posisi i, kemudian dibandingkan satu per satu dengan elemen berikutnya. Jika ditemukan elemen yang IPK-nya lebih kecil, maka idxMin diperbarui ke indeks tersebut.
+2. Proses Penukaran (Swap)
+javaMahasiswa tmp = listMhs[i];
+listMhs[i] = listMhs[idxMin];
+listMhs[idxMin] = tmp;
+Setelah indeks minimum ditemukan, proses ini berfungsi untuk menukar posisi elemen terkecil (listMhs[idxMin]) dengan elemen pada posisi i (listMhs[i]). Variabel tmp digunakan sebagai tempat penyimpanan sementara agar data tidak hilang saat penukaran berlangsung.
