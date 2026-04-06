@@ -81,3 +81,16 @@ javaMahasiswa tmp = listMhs[i];
 listMhs[i] = listMhs[idxMin];
 listMhs[idxMin] = tmp;
 Setelah indeks minimum ditemukan, proses ini berfungsi untuk menukar posisi elemen terkecil (listMhs[idxMin]) dengan elemen pada posisi i (listMhs[i]). Variabel tmp digunakan sebagai tempat penyimpanan sementara agar data tidak hilang saat penukaran berlangsung.
+
+Jawaban Pertanyaan (5.4.3)
+void insertionSort() {
+    for (int i = 1; i < listMhs.length; i++) {
+        Mahasiswa09 temp = listMhs[i];
+        int j = i - 1;
+        while (j >= 0 && listMhs[j].ipk < temp.ipk) { // > diubah menjadi 
+            listMhs[j + 1] = listMhs[j];
+            j--;
+        }
+        listMhs[j + 1] = temp;
+    }
+}
